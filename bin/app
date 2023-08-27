@@ -1,0 +1,11 @@
+#!/usr/bin/env node
+
+const dotEnv = require('dotenv');
+const dotEnvExpand = require('dotenv-expand');
+const Application = require('../build/app');
+
+dotEnvExpand.expand(dotEnv.config());
+
+const app = new Application();
+
+app.run();
